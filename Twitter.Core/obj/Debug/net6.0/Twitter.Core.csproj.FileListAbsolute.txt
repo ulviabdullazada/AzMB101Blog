@@ -1,0 +1,11 @@
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.Core\bin\Debug\net6.0\Twitter.Core.deps.json
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.Core\bin\Debug\net6.0\Twitter.Core.dll
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.Core\bin\Debug\net6.0\Twitter.Core.pdb
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.Core\obj\Debug\net6.0\Twitter.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.Core\obj\Debug\net6.0\Twitter.Core.AssemblyInfoInputs.cache
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.Core\obj\Debug\net6.0\Twitter.Core.AssemblyInfo.cs
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.Core\obj\Debug\net6.0\Twitter.Core.csproj.CoreCompileInputs.cache
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.Core\obj\Debug\net6.0\Twitter.Core.dll
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.Core\obj\Debug\net6.0\refint\Twitter.Core.dll
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.Core\obj\Debug\net6.0\Twitter.Core.pdb
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.Core\obj\Debug\net6.0\ref\Twitter.Core.dll

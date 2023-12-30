@@ -1,0 +1,17 @@
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.DAL\bin\Debug\net6.0\Twitter.DAL.deps.json
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.DAL\bin\Debug\net6.0\Twitter.DAL.runtimeconfig.json
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.DAL\bin\Debug\net6.0\Twitter.DAL.dll
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.DAL\bin\Debug\net6.0\Twitter.DAL.pdb
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.DAL\bin\Debug\net6.0\Twitter.Core.dll
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.DAL\bin\Debug\net6.0\Twitter.Core.pdb
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.DAL\obj\Debug\net6.0\Twitter.DAL.csproj.AssemblyReference.cache
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.DAL\obj\Debug\net6.0\Twitter.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.DAL\obj\Debug\net6.0\Twitter.DAL.AssemblyInfoInputs.cache
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.DAL\obj\Debug\net6.0\Twitter.DAL.AssemblyInfo.cs
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.DAL\obj\Debug\net6.0\Twitter.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.DAL\obj\Debug\net6.0\Twitter.DAL.csproj.CopyComplete
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.DAL\obj\Debug\net6.0\Twitter.DAL.dll
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.DAL\obj\Debug\net6.0\refint\Twitter.DAL.dll
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.DAL\obj\Debug\net6.0\Twitter.DAL.pdb
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.DAL\obj\Debug\net6.0\Twitter.DAL.genruntimeconfig.cache
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.DAL\obj\Debug\net6.0\ref\Twitter.DAL.dll
