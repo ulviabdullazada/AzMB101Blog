@@ -16,4 +16,8 @@
     <ProjectReference Include="..\Twitter.DAL\Twitter.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ExternalServices\Implements\" />
+  </ItemGroup>
+
 </Project>

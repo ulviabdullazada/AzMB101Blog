@@ -1,6 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Twitter.DAL.Contexts;
 using Twitter.Business;
+using Microsoft.AspNetCore.Identity;
+using Twitter.Core.Entities;
+using Twitter.API;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +14,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<TwitterContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("MSSql")));
+builder.Services.AddUserIdentity();
 builder.Services.AddRepositories();
 builder.Services.AddServices();
 builder.Services.AddBusinessLayer();

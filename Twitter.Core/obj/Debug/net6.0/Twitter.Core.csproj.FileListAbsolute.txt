@@ -9,3 +9,4 @@ C:\Users\Birinci novbe\Desktop\Twitter\Twitter.Core\obj\Debug\net6.0\Twitter.Cor
 C:\Users\Birinci novbe\Desktop\Twitter\Twitter.Core\obj\Debug\net6.0\refint\Twitter.Core.dll
 C:\Users\Birinci novbe\Desktop\Twitter\Twitter.Core\obj\Debug\net6.0\Twitter.Core.pdb
 C:\Users\Birinci novbe\Desktop\Twitter\Twitter.Core\obj\Debug\net6.0\ref\Twitter.Core.dll
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.Core\obj\Debug\net6.0\Twitter.Core.csproj.AssemblyReference.cache

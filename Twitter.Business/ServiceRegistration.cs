@@ -19,6 +19,7 @@ namespace Twitter.Business
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
             services.AddScoped<ITopicService, TopicService>();
+            services.AddScoped<IUserService, UserService>();
             return services;
         }
         public static IServiceCollection AddBusinessLayer(this IServiceCollection services)
