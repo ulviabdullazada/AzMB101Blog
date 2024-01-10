@@ -82,3 +82,4 @@ C:\Users\Birinci novbe\Desktop\Twitter\Twitter.API\bin\Debug\net6.0\Microsoft.As
 C:\Users\Birinci novbe\Desktop\Twitter\Twitter.API\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Birinci novbe\Desktop\Twitter\Twitter.API\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\Birinci novbe\Desktop\Twitter\Twitter.API\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Birinci novbe\Desktop\Twitter\Twitter.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

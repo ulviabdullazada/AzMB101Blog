@@ -1,6 +1,8 @@
 ﻿using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
 using Twitter.Business.Dtos.TopicDtos;
+using Twitter.Business.ExternalServices.Implements;
+using Twitter.Business.ExternalServices.Interfaces;
 using Twitter.Business.Profiles;
 using Twitter.Business.Repositories.Implements;
 using Twitter.Business.Repositories.Interfaces;
@@ -20,6 +22,8 @@ namespace Twitter.Business
         {
             services.AddScoped<ITopicService, TopicService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<ITokenService, TokenService>();
             return services;
         }
         public static IServiceCollection AddBusinessLayer(this IServiceCollection services)
