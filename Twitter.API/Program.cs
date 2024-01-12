@@ -10,10 +10,20 @@ using System.Text;
 using Microsoft.Extensions.Configuration;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerUI;
+using Twitter.Core.Enums;
+using Twitter.Business.Exceptions.AppUser;
+using Twitter.API.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 var jwt = builder.Configuration.GetSection("Jwt").Get<Jwt>();
 builder.Services.AddControllers();
+builder.Services.AddCors(opt =>
+{
+    opt.AddDefaultPolicy(pol =>
+    {
+        pol.WithOrigins("http://127.0.0.1:5500").AllowAnyHeader().AllowAnyMethod();
+    });
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(opt =>
@@ -49,12 +59,14 @@ builder.Services.AddRepositories();
 builder.Services.AddServices();
 builder.Services.AddBusinessLayer();
 builder.Services.AddAuth(jwt);
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseSeedData();
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
@@ -63,10 +75,17 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseCors();
+app.UseCustomExceptionHandler();
+//app.Use(async (context, n) =>
+//{
+//    var a = context.Connection.RemoteIpAddress;
+//    await Console.Out.WriteLineAsync("HEEEEEEEEEEEEEEEEREEEEEEEEEEEEEEEEEE");
+//    await Console.Out.WriteLineAsync(a.ToString());
+//    await n();
+//});
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();

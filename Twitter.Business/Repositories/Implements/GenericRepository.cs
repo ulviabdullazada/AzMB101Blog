@@ -17,8 +17,11 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
 
     public DbSet<T> Table => _context.Set<T>();
 
-    public IQueryable<T> GetAll(bool noTracking = true)
-        => noTracking ? Table.AsNoTracking() : Table;
+    public IQueryable<T> GetAll(bool noTracking = true, params string[] includes)
+    {
+        var query = _applyIncludes(Table.AsQueryable(), includes);
+        return noTracking ? query.AsNoTracking() : query;
+    }
 
     public async Task<bool> IsExistAsync(Expression<Func<T, bool>> expression)
     {
@@ -35,13 +38,31 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
         await _context.SaveChangesAsync();
     }
 
-    public async Task<T> GetByIdAsync(int id, bool noTracking = true)
+    public async Task<T> GetByIdAsync(int id, bool noTracking = true, params string[] includes)
     {
-        return noTracking ? await Table.AsNoTracking().SingleOrDefaultAsync(t=> t.Id == id) : await Table.FindAsync(id);
+        var query = _applyIncludes(Table.AsQueryable(), includes);
+        return noTracking ? await query.AsNoTracking().SingleOrDefaultAsync(t=> t.Id == id) : await query.SingleOrDefaultAsync(t => t.Id == id);
     }
 
     public void Remove(T data)
     {
         Table.Remove(data);
+    }
+    IQueryable<T> _applyIncludes(IQueryable<T> query, params string[] includes)
+    {
+        if (includes != null && includes.Length > 0)
+        {
+            foreach (var item in includes)
+            {
+                query = query.Include(item);
+            }
+        }
+        return query;
+    }
+
+    public async Task<T> GetSingleAsync(Expression<Func<T, bool>> expression, bool noTracking = true, params string[] includes)
+    {
+        var query = _applyIncludes(Table.AsQueryable(), includes);
+        return noTracking ? await query.AsNoTracking().SingleOrDefaultAsync(expression) : await query.SingleOrDefaultAsync(expression);
     }
 }

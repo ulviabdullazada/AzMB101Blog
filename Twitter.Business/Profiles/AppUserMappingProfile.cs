@@ -9,6 +9,7 @@ namespace Twitter.Business.Profiles
         public AppUserMappingProfile()
         {
             CreateMap<RegisterDto, AppUser>();
+            CreateMap<AppUser, AppUserInPostItemDto>();
         }
     }
 }

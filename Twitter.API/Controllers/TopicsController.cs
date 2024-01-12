@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Twitter.Business.Dtos.TopicDtos;
 using Twitter.Business.Exceptions.Topic;
 using Twitter.Business.Services.Interfaces;
+using Twitter.Core.Enums;
 
 namespace Twitter.API.Controllers
 {
@@ -16,7 +17,6 @@ namespace Twitter.API.Controllers
         {
             _service = service;
         }
-        [Authorize]
         [HttpGet]
         public IActionResult Get()
         {
@@ -25,15 +25,9 @@ namespace Twitter.API.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            try
-            {
-                return Ok(await _service.GetByIdAsync(id));
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            return Ok(await _service.GetByIdAsync(id));
         }
+        [Authorize(Roles = nameof(Roles.Admin))]
         [HttpPost]
         public async Task<IActionResult> Post(TopicCreateDto dto)
         {

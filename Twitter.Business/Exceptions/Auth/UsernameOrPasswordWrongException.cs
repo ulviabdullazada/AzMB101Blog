@@ -1,12 +1,20 @@
-﻿namespace Twitter.Business.Exceptions.Auth;
+﻿using Microsoft.AspNetCore.Http;
 
-public class UsernameOrPasswordWrongException : Exception
+namespace Twitter.Business.Exceptions.Auth;
+
+public class UsernameOrPasswordWrongException : Exception, IBaseException
 {
-    public UsernameOrPasswordWrongException() : base("Username or password is wrong")
+    public int StatusCode => StatusCodes.Status400BadRequest;
+    public string ErrorMessage { get; set; }
+
+    public UsernameOrPasswordWrongException()
     {
+        ErrorMessage = "Username or password is wrong";
     }
 
-    public UsernameOrPasswordWrongException(string? message) : base(message)
+    public UsernameOrPasswordWrongException(string? message)
     {
+        ErrorMessage = message;
     }
+
 }

@@ -14,6 +14,5 @@ public class AppUserConfiguration : IEntityTypeConfiguration<AppUser>
         builder.Property(b=>b.BirthDate)
             .IsRequired()
             .HasColumnType("date");
-        
     }
 }
